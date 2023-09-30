@@ -51,18 +51,25 @@ function App() {
                   molestiae facilis nisi!
                 </motion.p>
 
-                <motion.button
-                  variants={childrenVariant}
-                  className="py-2 px-12 rounded-2xl bg-red-600 transition-colors hover:bg-red-700 text-white"
-                >
-                  Available Videos <i className="ri-video-line"></i>
-                </motion.button>
+                <div className="flex items-center gap-2">
+                  <motion.button
+                    variants={childrenVariant}
+                    className="py-2 px-12 rounded-2xl bg-red-600 transition-colors hover:bg-red-700 text-white"
+                  >
+                    Available Videos <i className="ri-video-line"></i>
+                  </motion.button>
+                  <motion.button
+                    variants={childrenVariant}
+                    className="py-2 px-12 rounded-2xl transition-colors hover:bg-white hover:text-black border-2 text-white"
+                  >
+                    Instructions <i className="ri-video-line"></i>
+                  </motion.button>
+                </div>
               </motion.div>
 
               <motion.div
-                variants={containerVariant}
-                initial="hidden"
-                animate="show"
+                initial={{ x: "5%", opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
                 className="items-center text-center justify-center flex-wrap p-16 hidden md:flex"
               >
                 <div className="flex items-center text-center justify-center gap-1 flex-wrap">
